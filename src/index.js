@@ -8,8 +8,10 @@ const App = () => {
   const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState("");
 
+  const API_URL = process.env.RENDER_API_URL || "http://localhost:5000";
+
   useEffect(() => {
-    fetch("http://localhost:5000/tasks")
+    fetch(`${API_URL}/tasks`)
       .then((response) => response.json())
       .then((data) => setTasks(data))
       .catch((error) => console.error("Error fetching tasks:", error));
@@ -18,7 +20,7 @@ const App = () => {
   const handleClick = () => {
     if (input.trim() === "") return;
 
-    fetch("http://localhost:5000/tasks", {
+    fetch(`${API_URL}/tasks`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -49,7 +51,7 @@ const App = () => {
   };
 
   const handleDelete = (task) => {
-    fetch(`http://localhost:5000/tasks/${task._id}`, {
+    fetch(`${API_URL}/tasks/${task._id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -70,7 +72,7 @@ const App = () => {
   };
 
   const handleToggleComplete = (task) => {
-    fetch(`http://localhost:5000/tasks/${task._id}`, {
+    fetch(`${API_URL}/tasks/${task._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
