@@ -8,7 +8,9 @@ const App = () => {
   const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState("");
 
-  const API_URL = process.env.RENDER_API_URL || "http://localhost:5000";
+  const API_URL =
+    process.env.REACT_APP_RENDER_API_URL || "http://localhost:5000";
+  console.log("Using API URL:", process.env.REACT_APP_RENDER_API_URL);
 
   useEffect(() => {
     fetch(`${API_URL}/tasks`)
