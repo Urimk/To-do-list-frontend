@@ -3,7 +3,7 @@
 A clean and responsive task management interface built with **React** and **Tailwind CSS**.
 This is the client-side of the application.
 
-**[Live Demo](to-do-list-frontend-lomx2dmcb-uri-ks-projects.vercel.app)** |  **[Backend Repository](https://github.com/Urimk/To-do-list-backend)**
+**[Live Demo](https://to-do-list-frontend-lomx2dmcb-uri-ks-projects.vercel.app)** |  **[Backend Repository](https://github.com/Urimk/To-do-list-backend)**
 
 ---
 
