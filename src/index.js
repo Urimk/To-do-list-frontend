@@ -104,17 +104,20 @@ const App = () => {
         <h1 className="text-3xl font-bold text-blue-800 mb-6 text-center">
           Task Manager
         </h1>
-        <form onSubmit={handleSubmit} className="flex gap-2 mb-6">
+        <form
+          onSubmit={handleSubmit}
+          className="flex gap-4 sm:gap-2 mb-6 flex-col sm:flex-row items-center"
+        >
           <input
             type="text"
-            className="flex-1 border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-blue-400"
+            className="flex-1 w-full sm:w-auto border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-1 focus:ring-blue-400"
             placeholder="Your Task"
             value={input}
             onChange={handleChange}
           ></input>
           <button
             onClick={handleClick}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-200"
+            className="w-2/3 sm:w-auto bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-200"
           >
             Add Task
           </button>
