@@ -5,6 +5,8 @@ This is the client-side of the application.
 
 **[Live Demo](https://to-do-list-frontend-lomx2dmcb-uri-ks-projects.vercel.app)** |  **[Backend Repository](https://github.com/Urimk/To-do-list-backend)**
 
+<img width="787" height="426" alt="Demo image" src="https://github.com/user-attachments/assets/a22af966-5939-4ae9-a8f0-77e648e09084" />
+
 ---
 
 ## Tech Stack
