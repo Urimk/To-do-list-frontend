@@ -9,7 +9,7 @@ const TaskManager = () => {
   const [input, setInput] = useState("");
   const [btnMessage, setBtnMessage] = useState("Loading...");
 
-  const navigator = useNavigate();
+  const navigate = useNavigate();
 
   const API_URL =
     process.env.REACT_APP_RENDER_API_URL || "http://localhost:5000";

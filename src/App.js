@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { TaskManager, Login, Register } from "./pages";
 import { PrivateRoute, PublicRoute } from "./components";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
