@@ -68,7 +68,6 @@ const Register = () => {
     const passError = validatePassword(details.password);
     if (nameError) setNameError(nameError);
     if (passError) setPasswordError(passError);
-    console.log(passError);
     if (nameError || passError) return false;
     return true;
   };
