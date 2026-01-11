@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Toaster, toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 import TaskList from "../../components/taskList";
@@ -28,6 +28,12 @@ const TaskManager = () => {
             Authorization: "Bearer " + token,
           },
         });
+        if (response.status === 401) {
+          localStorage.removeItem("token");
+          toast.error("Session expired. Please login again.");
+          navigate("/login");
+          return;
+        }
         const data = await response.json();
         setTasks(data);
       } catch (error) {
@@ -139,9 +145,6 @@ const TaskManager = () => {
 
   return (
     <main className="min-h-screen bg-blue-100 flex flex-col">
-      <div>
-        <Toaster />
-      </div>
       <nav className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-14">

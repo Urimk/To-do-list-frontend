@@ -6,6 +6,9 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50 text-gray-900">
+        <div>
+          <Toaster />
+        </div>
         <Routes>
           <Route
             path="/"

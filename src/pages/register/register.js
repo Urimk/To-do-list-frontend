@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Toaster, toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 const Register = () => {
   const [details, setDetails] = useState({ username: "", password: "" });
@@ -110,9 +110,6 @@ const Register = () => {
 
   return (
     <div className="min-h-screen bg-blue-50 flex items-center justify-center p-4">
-      <div>
-        <Toaster />
-      </div>
       {/* Container */}
       <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md border border-gray-100">
         {/* Title */}
