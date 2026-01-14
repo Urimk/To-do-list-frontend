@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import ServerStatus from "../../components/serverStatus";
 
 import TaskList from "../../components/taskList";
 
@@ -153,13 +154,14 @@ const TaskManager = () => {
                 Task<span className="text-gray-800">Master</span>
               </span>
             </div>
+            <ServerStatus onNav={true} />
 
             <button
               onClick={() => {
                 localStorage.removeItem("token");
                 window.location.href = "/login";
               }}
-              className="text-sm font-medium text-gray-500 hover:text-red-600 transition-colors duration-200 flex items-center gap-2"
+              className="text-sm font-medium text-gray-500 hover:text-red-600 transition-colors duration-200 flex items-center gap-2 ml-14"
             >
               Sign Out
             </button>

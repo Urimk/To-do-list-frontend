@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
+import ServerStatus from "../../components/serverStatus";
 
 const Register = () => {
   const [details, setDetails] = useState({ username: "", password: "" });
@@ -110,6 +111,7 @@ const Register = () => {
 
   return (
     <div className="min-h-screen bg-blue-50 flex items-center justify-center p-4">
+      <ServerStatus />
       {/* Container */}
       <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md border border-gray-100">
         {/* Title */}
