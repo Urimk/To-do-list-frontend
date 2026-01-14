@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 
-const ServerStatus = ({ onNav = false }) => {
+const ServerStatus = () => {
   const [status, setStatus] = useState("checking");
   const API_URL =
     process.env.REACT_APP_RENDER_API_URL || "http://localhost:5000";
@@ -25,13 +25,7 @@ const ServerStatus = ({ onNav = false }) => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <div
-      className={
-        onNav
-          ? "relative"
-          : "fixed top-2 right-2 sm:top-auto sm:bottom-5 sm:right-5q"
-      }
-    >
+    <div className="relative">
       {status === "checking" && (
         <div className="flex flex-row bg-yellow-50 items-center gap-1 sm:gap-2 border-2 rounded-lg border-yellow-400 p-1.5 sm:p-2">
           <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-400"></div>

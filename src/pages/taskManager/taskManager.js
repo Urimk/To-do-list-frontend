@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import ServerStatus from "../../components/serverStatus";
-
 import TaskList from "../../components/taskList";
 
 const TaskManager = () => {
@@ -145,29 +143,7 @@ const TaskManager = () => {
   const isBtnDisabled = btnMessage !== "Add Task";
 
   return (
-    <main className="min-h-screen bg-blue-100 flex flex-col">
-      <nav className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-14">
-            <div className="flex items-center">
-              <span className="text-xl font-bold text-blue-600 tracking-wide">
-                Task<span className="text-gray-800">Master</span>
-              </span>
-            </div>
-            <ServerStatus onNav={true} />
-
-            <button
-              onClick={() => {
-                localStorage.removeItem("token");
-                window.location.href = "/login";
-              }}
-              className="text-sm font-medium text-gray-500 hover:text-red-600 transition-colors duration-200 flex items-center gap-2 ml-14"
-            >
-              Sign Out
-            </button>
-          </div>
-        </div>
-      </nav>
+    <main className="bg-blue-100 flex flex-col">
       <div className="flex-1  flex items-center justify-center py-10">
         <div className=" bg-white p-8 rounded-xl shadow-xl w-full max-w-md">
           <h1 className="text-2xl font-bold text-blue-800 mb-6 text-center">
